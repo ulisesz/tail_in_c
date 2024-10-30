@@ -18,5 +18,13 @@
     <ClCompile Include="tail_in_c.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="argumentParser.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="argumentParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

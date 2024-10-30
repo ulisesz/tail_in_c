@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="argumentParser.c" />
     <ClCompile Include="tail_in_c.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="argumentParser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
