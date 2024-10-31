@@ -21,9 +21,15 @@
     <ClCompile Include="argumentParser.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="fileTailHelper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="argumentParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fileTailHelper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

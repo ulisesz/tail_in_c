@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "argumentParser.h"
+#include "fileTailHelper.h"
 
 // usage: tail <FILENAME>
 // usage: tail -n K <FILENAME>
@@ -21,11 +22,22 @@ int main(int argc, char** argv)
     int numberOfLines = 10;
     char* fileName = NULL;
     extractArguments(argc, argv, &numberOfLines, &fileName);
-
     printf(" - Number of lines: %d\n", numberOfLines);
     printf(" - FileName: %s", fileName);
+    
+    FILE* fileHandle = fopen(fileName, "r");
+    if (!fileHandle)
+    {
+        printf("Invalid filename argument, exiting!\n");
+        goto freeExit;
+    }
 
+    printFileTail(fileHandle, numberOfLines);
+    fclose(fileHandle);
+
+freeExit:
     free(fileName);
+
 exit:
     printf("\n\n");
     return 0;
