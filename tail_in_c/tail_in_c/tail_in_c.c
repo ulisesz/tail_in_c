@@ -23,7 +23,7 @@ int main(int argc, char** argv)
     char* fileName = NULL;
     extractArguments(argc, argv, &numberOfLines, &fileName);
     printf(" - Number of lines: %d\n", numberOfLines);
-    printf(" - FileName: %s", fileName);
+    printf(" - FileName: %s\n", fileName);
     
     FILE* fileHandle = fopen(fileName, "r");
     if (!fileHandle)
